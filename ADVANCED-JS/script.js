@@ -108,7 +108,9 @@ console.log(oldPeopleJ)
 // // [256, 3125, 46656, 823543, 16777216, 387420489, 10000000000]
 
 // ```
-
+const numbers = [ 4, 5, 6, 7, 8, 9, 10]
+const elevatedNumbers = numbers.map(num => num ** num);
+console.log(elevatedNumbers);
 // ## 4. Filter
 
 // - [ ] 1.- Crea un segundo array que devuelva los impares
@@ -117,6 +119,10 @@ console.log(oldPeopleJ)
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // ```
+
+const oddNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const filteredNumbers = oddNumbers.filter(num => num % 2 !== 0);
+console.log(filteredNumbers);
 
 // - [ ] 2.- Dado el siguiente array, genera un segundo array que filtre los platos veganos y saque una sentencia como la del ejemplo:
 
@@ -134,6 +140,18 @@ console.log(oldPeopleJ)
 // 	*/
 // ```
 
+ const foodList = [
+	{ name: 'Tempeh', isVeggie: true },
+	{ name: 'Cheesbacon burguer', isVeggie: false },
+	{ name: 'Tofu burguer', isVeggie: true },
+	{ name: 'Entrecot', isVeggie: false }
+]
+
+const veggieFoods = foodList
+    .filter(food => food.isVeggie)
+    .map(food => `Que rico ${food.name} me voy a comer!`);
+console.log(veggieFoods);
+
 // ## 5. Reduce
 
 // - [ ] 1.- Dado el siguiente array, obtén la multiplicación de todos los elementos del array:
@@ -143,6 +161,10 @@ console.log(oldPeopleJ)
 // // Salida--> 483600
 
 // ```
+
+const numbersMult = [39, 2, 4, 25, 62];
+const multiplied = numbersMult.reduce((acc, num) => acc * num);
+console.log(multiplied);
 
 // ### Extras
 
